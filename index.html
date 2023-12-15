@@ -304,7 +304,7 @@
 
    		<div class="col-twelve">
             <!-- form -->
-            <form id="contactForm" method="post" action="sendEmail.php">
+            <form id="contactForm" method="post">
       			<div>
 
                   <div class="form-field">
@@ -320,7 +320,7 @@
 	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
 	               </div>                      
                  <div class="form-field">
-                     <button type="submit" class="submitform">Submit</button>
+                     <button type="submit" onclick="alert('Sent Successfully')" class="submitform">Submit</button>
                      <div id="submit-loader">
                         <div class="text-loader">Sending...</div>                             
        				      <div class="s-loader">

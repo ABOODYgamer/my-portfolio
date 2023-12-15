@@ -21,4 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		toggleButton.classList.toggle('is-clicked');
 		navigation.classList.toggle('clicked');
 	}); 
+	document.addEventListener('click', function (e) {
+		const isClickInsideMenu = navigation.contains(e.target) || e.target === toggleButton;
+		if (!isClickInsideMenu && navigation.classList.contains('clicked')) {
+			closeMenuIfOpened();
+		}
+	});
+	function closeMenuIfOpened() {
+		toggleButton.classList.remove('is-clicked');
+		navigation.classList.remove('clicked');
+	}
 });
